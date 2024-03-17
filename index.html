@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Comparação de Números</title>
+<script>
+function validarNumeros() {
+    var primeiroNumero = document.getElementById('primeiroNumero').value;
+    var segundoNumero = document.getElementById('segundoNumero').value;
+
+  // Converte os valores para números
+    primeiroNumero = Number(primeiroNumero);
+    segundoNumero = Number(segundoNumero);
+
+  // Verifica se o segundo número é maior que o primeiro
+    if (segundoNumero > primeiroNumero) {
+    alert('Validação bem-sucedida: O segundo número é maior que o primeiro.');
+    return true;
+    } else {
+    alert('Validação falhou: O segundo número não é maior que o primeiro.');
+    return false;
+    }
+}
+</script>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Comparação de Números</h1>
+    <h2>Preencha os campos abaixo:</h2>
+    <form onsubmit="return validarNumeros()">
+        <label for="primeiroNumero">Primeiro Número:</label>
+        <input type="number" id="primeiroNumero" required>
+        <br>
+        <label for="segundoNumero">Segundo Número:</label>
+        <input type="number" id="segundoNumero" required>
+        <br>
+        <button id="btn-comparar" type="submit">Comparar</button>
+    </form>
+</body>
+</html>
